@@ -9,6 +9,7 @@ import HomeScreen from "./pages/home-screen-page";
 import InstructionScreen from "./pages/instruction-page";
 import LayoutQuestion from "./pages/layout-question";
 import QuestionScreen from "./pages/question-page";
+import LiveScorecreen from "./pages/live-score-page";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path: "instruction-page",
         element: <InstructionScreen />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "live-score-page",
+        element: <LiveScorecreen />,
         errorElement: <ErrorPage />,
       },
     ],

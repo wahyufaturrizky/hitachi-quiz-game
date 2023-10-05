@@ -9,13 +9,17 @@ const HomeScreen = () => {
     <div className="sm:mx-auto sm:w-full sm:max-w-sm min-h-screen bg-regal-blue">
       <div className="flex flex-col">
         <img src={homeScreenImg} alt="" />
-        <div className="flex flex-col -mt-32">
+        <div className="flex flex-col -mt-10">
           <img
             onClick={() => navigate("/instruction-page")}
             src={playButtonImg}
             alt=""
           />
-          <img src={liveScoreBoard} alt="" />
+          <img
+            onClick={() => navigate("/live-score-page")}
+            src={liveScoreBoard}
+            alt=""
+          />
         </div>
       </div>
     </div>
