@@ -32,15 +32,15 @@ const QuestionScreen = () => {
       valDesc: desc,
     });
 
-    if (correctAnswer === data) {
-      setTimeout(() => {
-        setIsShowBasicModal({
-          ...isShowBasicModal,
-          isShow: false,
-        });
-        navigate("/question/2");
-      }, 1000);
-    }
+    setTimeout(() => {
+      setIsShowBasicModal({
+        ...isShowBasicModal,
+        isShow: false,
+      });
+      if (correctAnswer === data && Number(numberOfQuestion) < 5) {
+        navigate(`/question/${Number(numberOfQuestion) + 1}`);
+      }
+    }, 1000);
   };
 
   return (
