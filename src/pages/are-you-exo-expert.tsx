@@ -11,7 +11,7 @@ const EcoExpertScreen = () => {
     <div className="sm:mx-auto sm:w-full sm:max-w-sm min-h-screen">
       <div className="py-4 px-4">
         <div className="flex">
-          <CloseBlackIcon onClick={() => navigate(-1)} />
+          <CloseBlackIcon onClick={() => navigate("/")} />
         </div>
       </div>
 
@@ -29,7 +29,11 @@ const EcoExpertScreen = () => {
         <div className="flex flex-col">
           <img src={btnShare} alt="" />
           <img src={btnCaseStudy} alt="" />
-          <img src={btnLiveBoard} alt="" />
+          <img
+            onClick={() => navigate("/live-score-page")}
+            src={btnLiveBoard}
+            alt=""
+          />
         </div>
       </div>
     </div>
