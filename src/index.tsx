@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./pages/error-page";
 import HomeScreen from "./pages/home-screen-page";
+import InstructionScreen from "./pages/instruction-page";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeScreen />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/instruction-page",
+        element: <InstructionScreen />,
+        errorElement: <ErrorPage />,
       },
     ],
   },
