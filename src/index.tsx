@@ -7,6 +7,8 @@ import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./pages/error-page";
 import HomeScreen from "./pages/home-screen-page";
 import InstructionScreen from "./pages/instruction-page";
+import LayoutQuestion from "./pages/layout-question";
+import QuestionScreen from "./pages/question-page";
 
 const router = createBrowserRouter([
   {
@@ -20,8 +22,20 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: "/instruction-page",
+        path: "instruction-page",
         element: <InstructionScreen />,
+        errorElement: <ErrorPage />,
+      },
+    ],
+  },
+  {
+    path: "/question",
+    element: <LayoutQuestion />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/question/:numberOfQuestion",
+        element: <QuestionScreen />,
         errorElement: <ErrorPage />,
       },
     ],
