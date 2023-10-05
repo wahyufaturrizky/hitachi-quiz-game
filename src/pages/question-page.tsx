@@ -39,6 +39,8 @@ const QuestionScreen = () => {
       });
       if (correctAnswer === data && Number(numberOfQuestion) < 5) {
         navigate(`/question/${Number(numberOfQuestion) + 1}`);
+      } else if (correctAnswer === data && Number(numberOfQuestion) === 5) {
+        navigate("/eco-expert-page");
       }
     }, 1000);
   };

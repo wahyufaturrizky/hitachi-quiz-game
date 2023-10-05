@@ -1,15 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
+import "./index.css";
+import EcoExpertScreen from "./pages/are-you-exo-expert";
 import ErrorPage from "./pages/error-page";
 import HomeScreen from "./pages/home-screen-page";
 import InstructionScreen from "./pages/instruction-page";
 import LayoutQuestion from "./pages/layout-question";
+import LiveScoreScreen from "./pages/live-score-page";
 import QuestionScreen from "./pages/question-page";
-import LiveScorecreen from "./pages/live-score-page";
+import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,12 @@ const router = createBrowserRouter([
       },
       {
         path: "live-score-page",
-        element: <LiveScorecreen />,
+        element: <LiveScoreScreen />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "eco-expert-page",
+        element: <EcoExpertScreen />,
         errorElement: <ErrorPage />,
       },
     ],

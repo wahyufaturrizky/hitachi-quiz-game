@@ -4,7 +4,7 @@ import progressImg from "../assets/progress.svg";
 import playButtonImg from "../assets/play-button.svg";
 import { ReactComponent as CloseIcon } from "../assets/close.svg";
 
-const LiveScorecreen = () => {
+const LiveScoreScreen = () => {
   const navigate = useNavigate();
   return (
     <div className="sm:mx-auto sm:w-full sm:max-w-sm min-h-screen bg-regal-blue">
@@ -34,4 +34,4 @@ const LiveScorecreen = () => {
   );
 };
 
-export default LiveScorecreen;
+export default LiveScoreScreen;
