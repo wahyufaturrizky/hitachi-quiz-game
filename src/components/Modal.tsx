@@ -26,7 +26,7 @@ const Modal = ({
         )}
 
         <div className="absolute top-52">
-          <div className="px-14 py-0">
+          <div className="px-20 py-0">
             <p className="text-center font-semibold text-sm">
               Correct answer: {valCorrectAnswer}
             </p>
